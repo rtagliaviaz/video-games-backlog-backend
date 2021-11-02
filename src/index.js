@@ -11,11 +11,11 @@ require('./database');
 
 const app = express();
 
-app.use(cors())
+
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 app.use(gamesRoutes)
-
+app.use(cors())
 const url = "https://www.pricecharting.com/search-products?q=";
 let names = []
 
