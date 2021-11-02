@@ -2,7 +2,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const express = require("express");
 const cors = require('cors');
-require('dotenv')
+require('dotenv').config()
 const gamesRoutes = require('./routes/games.routes');
 
 
