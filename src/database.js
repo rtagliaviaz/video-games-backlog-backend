@@ -1,8 +1,10 @@
+
 // `mongodb://localhost/gamesDB`
 
 
 const mongoose = require('mongoose');
-require('dotenv');
+require('dotenv').config();
+
 
 (async () => {
   try {
@@ -17,3 +19,4 @@ require('dotenv');
     console.error(error);
   }
 })();
+
