@@ -3,29 +3,17 @@ const cheerio = require("cheerio");
 const express = require("express");
 const cors = require('cors');
 require('dotenv').config()
-
+const gamesRoutes = require('./routes/games.routes');
 
 
 
 require('./database');
 
 const app = express();
-app.all('*', function(req, res, next) {
-  var origin = req.get('origin'); 
-  res.header('Access-Control-Allow-Origin', origin);
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-});
-app.use(
-  cors({
-      origin: "http://localhost:3000", 
-      credentials: true,
-  })
-);
+
+app.use(cors())
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
-const gamesRoutes = require('./routes/games.routes');
 app.use(gamesRoutes)
 
 const url = "https://www.pricecharting.com/search-products?q=";

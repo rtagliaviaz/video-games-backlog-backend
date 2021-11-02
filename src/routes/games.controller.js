@@ -3,7 +3,7 @@ const Game = require('./Games');
 
 gamesCtrl.getGames = async (req, res) => {
   try {
-    const games = await Game.findOne();
+    const games = await Game.find();
     return res.json(games);
   } catch (error) {
     res.json(error);
