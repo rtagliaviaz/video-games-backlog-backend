@@ -11,11 +11,16 @@ require('./database');
 
 const app = express();
 
-
+app.use(
+  cors({
+      origin: "http://localhost:4000", 
+      credentials: true,
+  })
+);
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 app.use(gamesRoutes)
-app.use(cors())
+
 const url = "https://www.pricecharting.com/search-products?q=";
 let names = []
 

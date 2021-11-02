@@ -1,1 +1,2 @@
-POST https://node-gamesdb.herokuapp.com/backlog
+GET https://node-gamesdb.herokuapp.com/backlog
+Access-Control-Allow-Origin: *

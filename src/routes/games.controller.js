@@ -30,6 +30,15 @@ gamesCtrl.addGameToBacklog = async (req, res) => {
   }
   
 }
+
+gamesCtrl.test = async(req, res) => {
+  try {
+    console.log(req.body)
+    res.json('hola pepe')
+  } catch (error) {
+    
+  }
+}
 // export const getVideo: RequestHandler = async (req, res) => {
 //   const videoFound = await Video.findById(req.params.id)
 //   if(!videoFound) return res.status(204).json()
