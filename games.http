@@ -1,2 +1,1 @@
 GET https://node-gamesdb.herokuapp.com/backlog
-Access-Control-Allow-Origin: *
