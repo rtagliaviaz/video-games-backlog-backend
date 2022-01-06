@@ -1,5 +1,5 @@
 const {Router} = require('express');
-const {getGames, addGameToBacklog, deleteFromBacklog, test} = require('./games.controller');
+const {getGames, getGame, addGameToBacklog, deleteFromBacklog} = require('./games.controller');
 
 
 const router = Router()
@@ -8,11 +8,9 @@ router.route('/backlog')
   .get(getGames)
   .post(addGameToBacklog)
 
-router.route('/test')
-  .post(test) 
-
 router.route('/backlog/:id')
   .delete(deleteFromBacklog)
+  .get(getGame)
 // router.get('/wishlist', getGames)
 // router.get('/videos/:id', videoCtrl.getVideo)
 // router.post('/wishlist', videoCtrl.addGame)

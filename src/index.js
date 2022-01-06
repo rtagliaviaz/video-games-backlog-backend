@@ -75,7 +75,8 @@ app.post('/', async (req, res) => {
           id,
           title,
           img,
-          system
+          system,
+          backlog: false
         });
       });
   
